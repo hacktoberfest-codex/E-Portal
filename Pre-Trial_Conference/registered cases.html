@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Cases</title>
+    <style>
+        /* Reset some default styles for a cleaner look */
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style the navigation bar */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Style the main content area */
+        .content {
+            padding: 20px;
+        }
+
+        /* Style individual case entries */
+        .case {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .case h2 {
+            margin: 0;
+        }
+
+        .case p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Registered Cases</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <!-- First Registered Case -->
+        <div class="case">
+            <h2>Case 1</h2>
+            <p>Case name: Defamation</p>
+            <p>Section: 499</p>
+            <p>Date of Registration: September 16, 2023</p>
+            <p>Status: Trial/In Progress</p>
+        </div>
+
+        <!-- Second Registered Case -->
+        <div class="case">
+            <h2>Case 2</h2>
+            <p>Case name: Attempt to Murder</p>
+            <p>Section: 307</p>
+            <p>Date of Registration: September 17, 2023</p>
+            <p>Status: Trial/In Progress</p>
+        </div>
+    </div>
+</body>
+</html>
