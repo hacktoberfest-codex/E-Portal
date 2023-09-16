@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            width: 70%;
+            margin: 0 auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personal Information</h1>
+    <form enctype="multipart/form-data" action="process_form.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="aadharNumber">Aadhar Card Number:</label>
+        <input type="number" id="aadharNumber" name="aadharNumber" required><br><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea><br><br>
+
+        <label for="highSchool">High School:</label>
+        <input type="text" id="highSchool" name="highSchool" required><br><br>
+
+        <label for="college">College:</label>
+        <input type="text" id="college" name="college" required><br><br>
+
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree" name="degree" required><br><br>
+
+        <label for="aadharCard">Aadhar Card Image:</label>
+        <input type="file" id="aadharCard" name="aadharCard" accept="image/*" required><br><br>
+
+        <label for="signature">Signature Image:</label>
+        <input type="file" id="signature" name="signature" accept="image/*" required><br><br>
+
+        <label for="passportPhoto">Passport Size Photo:</label>
+        <input type="file" id="passportPhoto" name="passportPhoto" accept="image/*" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
