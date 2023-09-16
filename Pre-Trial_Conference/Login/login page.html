@@ -1,88 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #e7d9d9;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
         }
+
         .container {
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #6d729b;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+
         h2 {
             text-align: center;
-            color: #333333;
         }
+
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
+
         label {
             display: block;
             margin-bottom: 5px;
-            color: #666666;
         }
+
         input[type="text"],
         input[type="password"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 3px;
         }
-        button[type="submit"] {
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .btn {
             display: block;
             width: 100%;
             padding: 10px;
-            background-color: #ece8e8;
-            color: #110f0f;
+            background-color: #007BFF;
+            color: #fff;
             border: none;
             border-radius: 3px;
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form id="login-form" onsubmit="return validateForm()">
+        <form action="your_login_handler.php" method="POST">
             <div class="form-group">
-                <label for="registration-number">Registration Number</label>
-                <input type="text" id="registration-number" name="registration-number" required>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your role-specific code" required>
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Login</button>
+            <div class="form-group">
+                <label for="role">Select your role:</label>
+                <select id="role" name="role" required>
+                    <option value="advocate">Advocate</option>
+                    <option value="user">User</option>
+                    <option value="judge">Judge</option>
+                    <option value="govt_official">Government Official</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Login</button>
         </form>
     </div>
-    <script>
-        function validateForm() {
-            // For example, you can check if the registration number and password are correct
-            // If they are incorrect, display an error message and prevent form submission
-            // For demonstration purposes, you can check against hardcoded values
-            const registrationNumber = document.getElementById("registration-number").value;
-            const password = document.getElementById("password").value;
-            // Replace these with actual validation and authentication logic
-            if (registrationNumber === "exampleuser" && password === "password123") {
-                alert("Login successful!");
-                return true; 
-                // Allow form submission
-            } else {
-                alert("Invalid registration number or password.");
-                return false; 
-                // Prevent form submission
-            }
-        }
-    </script>
 </body>
+
 </html>
