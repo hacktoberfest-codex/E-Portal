@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+       </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>User Registration</h2>
+            <form id="registration-form" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <span id="username-error" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="email-error" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <span id="password-error" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <span id="confirm-password-error" class="error"></span>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    <script>
+        function validateForm() {
+            // You can check username availability, validate email format, check password strength, and confirm password match
+            // Return false to prevent form submission if there are validation errors
+            return false;}
+    </script>
+</body>
+</html>
