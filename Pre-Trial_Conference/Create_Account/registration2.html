@@ -3,82 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
-    <!-- Link to an external CSS stylesheet for better styling -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <!-- Include Google Fonts for improved typography -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Pacifico&display=swap">
-    <!-- Apply custom CSS styles for a professional look -->
+    <title>Role Selection</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
         }
-        .center-container {
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        .container {
             text-align: center;
+            margin-top: 100px;
         }
-        h2 {
-            font-family: 'Pacifico', cursive;
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
+        select {
             padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            max-width: 200px;
+            font-size: 16px;
         }
-        input[type="submit"] {
-            background-color: #007bff;
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
             color: #fff;
             border: none;
-            border-radius: 4px;
-            padding: 10px 20px;
             cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #0056b3; /* Darker blue on hover */
         }
     </style>
 </head>
 <body>
-    <div class="center-container">
-        <h2>Register</h2>
-        <form method="POST" action="/register">
-            <!-- Improved styling and spacing for labels and input fields -->
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="confirm_password">Confirm Password:</label>
-            <input type="password" id="confirm_password" name="confirm_password" required>
-
-            <!-- Improved styling for the submit button -->
-            <input type="submit" value="Register">
-        </form>
+    <div class="container">
+        <h1>Select Your Role:</h1>
+        <select id="roleSelect">
+            <option value="user">User</option>
+            <option value="advocate">Advocate</option>
+            <option value="judge">Judge</option>
+            <option value="clerk">Clerk</option>
+            <option value="govt-official">Government Official</option>
+        </select>
+        <br><br>
+        <button onclick="submitRole()">Submit</button>
     </div>
+
+    <script>
+        function submitRole() {
+            const selectedRole = document.getElementById("roleSelect").value;
+            alert(You have selected the role: ${selectedRole});
+            // You can perform additional actions based on the selected role here.
+        }
+    </script>
 </body>
 </html>
