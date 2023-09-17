@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.calendar-day {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    margin: 2px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.available {
+    background-color: green;
+    color: white;
+}
+
+.unavailable {
+    background-color: red;
+    color: white;
+}
