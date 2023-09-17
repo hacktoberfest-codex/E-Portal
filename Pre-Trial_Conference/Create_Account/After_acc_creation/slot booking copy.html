@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" type="text/css" href="slot booking copy.css">
+    <title>Slot Booking</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Slot Booking</h1>
+        <div class="calendar">
+            <h2>Select a Date and Time:</h2>
+            <input type="date" id="datePicker">
+            <select id="timeSlot">
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+            </select>
+            <button id="bookButton">Book Slot</button>
+        </div>
+        <div class="booking-details" id="confirmationMessage" style="display:none;">
+            <h2>Your Booking Details:</h2>
+            <p>Date: <span id="bookingDate"></span></p>
+            <p>Time: <span id="bookingTime"></span></p>
+            <p><strong>Booking Confirmed!</strong></p>
+        </div>
+    </div>
+
+    
+    <script>
+        // JavaScript code to handle the "Book Slot" button click
+        document.getElementById("bookButton").addEventListener("click", function() {
+            // Get the selected date and time
+            const selectedDate = document.getElementById("datePicker").value;
+            const selectedTime = document.getElementById("timeSlot").value;
+
+            // Update the booking details
+            document.getElementById("bookingDate").textContent = selectedDate;
+            document.getElementById("bookingTime").textContent = selectedTime;
+
+            // Hide the calendar and show the confirmation message
+            document.querySelector(".calendar").style.display = "none";
+            document.getElementById("confirmationMessage").style.display = "block";
+        });
+    </script>
+</body>
+</html>

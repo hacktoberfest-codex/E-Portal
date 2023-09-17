@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video Chat</title>
+</head>
+
+<body>
+    <video id="localVideo" autoplay></video>
+    <video id="remoteVideo" autoplay></video>
+    <button id="startButton">Start Video Chat</button>
+    <button id="hangupButton">Hang Up</button>
+
+    <script>
+        const localVideo = document.getElementById('localVideo');
+        const remoteVideo = document.getElementById('remoteVideo');
+        const startButton = document.getElementById('startButton');
+        const hangupButton = document.getElementById('hangupButton');
+        let localStream, remoteStream;
+
+        // Code to set up WebRTC connections goes here.
+
+        startButton.addEventListener('click', () => {
+            // Code to initiate a video call.
+        });
+
+        hangupButton.addEventListener('click', () => {
+            // Code to end the video call.
+        });
+    </script>
+</body>
+
+</html>
