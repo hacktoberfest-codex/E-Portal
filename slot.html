@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <link rel="stylesheet" href="styles.css">
-     <link rel ="stylesheet" type = "text/css" href ="slot.css">
+     <link rel="stylesheet" type="text/css" href="slot.css">
     <title>Slot Booking</title>
 </head>
 
 <body>
-    <script type = "text/javascript" src = "slot.js"></script>
     <div class="container">
         <h1>Slot Booking</h1>
         <div class="calendar">
@@ -24,13 +23,30 @@
             </select>
             <button id="bookButton">Book Slot</button>
         </div>
-        <div class="booking-details">
+        <div class="booking-details" id="confirmationMessage" style="display:none;">
             <h2>Your Booking Details:</h2>
             <p>Date: <span id="bookingDate"></span></p>
             <p>Time: <span id="bookingTime"></span></p>
+            <p><strong>Booking Confirmed!</strong></p>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // JavaScript code to handle the "Book Slot" button click
+        document.getElementById("bookButton").addEventListener("click", function() {
+            // Get the selected date and time
+            const selectedDate = document.getElementById("datePicker").value;
+            const selectedTime = document.getElementById("timeSlot").value;
+
+            // Update the booking details
+            document.getElementById("bookingDate").textContent = selectedDate;
+            document.getElementById("bookingTime").textContent = selectedTime;
+
+            // Hide the calendar and show the confirmation message
+            document.querySelector(".calendar").style.display = "none";
+            document.getElementById("confirmationMessage").style.display = "block";
+        });
+    </script>
 </body>
 </html>
