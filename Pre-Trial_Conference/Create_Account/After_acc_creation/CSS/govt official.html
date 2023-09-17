@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Arial Black", sans-serif;
+            color: #333;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .otp-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .otp-button:hover {
+            background-color: #45a049;
+        }
+
+        .submit-button {
+            background-color: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #0077A3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Police Registration</h1>
+        <form action="registration_handler.php" method="POST">
+            <label for="police_name">Police Name:</label>
+            <input type="text" id="police_name" name="police_name" required>
+
+            <label for="police_id">Police ID No.:</label>
+            <input type="text" id="police_id" name="police_id" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+
+            <button class="otp-button" type="button" onclick="generateOTP()">Generate OTP</button>
+            <label for="otp">OTP Verification:</label>
+            <input type="text" id="otp" name="otp" required>
+
+            <button class="submit-button" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // Example OTP generation function
+        function generateOTP() {
+            // Generate OTP logic here
+            // For demo purposes, you can generate a random 6-digit OTP
+            const otp = Math.floor(100000 + Math.random() * 900000);
+            document.getElementById("otp").value = otp;
+        }
+    </script>
+</body>
+
+</html>
