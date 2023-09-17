@@ -30,22 +30,24 @@
     <div class="container">
         <h1>Select Your Role:</h1>
         <select id="roleSelect">
-            <option value="user">User</option>
-            <option value="advocate">Advocate</option>
-            <option value="judge">Judge</option>
-            <option value="clerk">Clerk</option>
-            <option value="govt-official">Government Official</option>
+            <option value="" disabled selected>Select an option</option>
+            <option value="After_acc_creation/account created.html">User</option>
+            <option value="After_acc_creation/advocate registration.html">Advocate</option>
+            <option value="After_acc_creation/jugde_registration.html">Judge</option>
+            <option value="After_acc_creation/clerk login.html">Clerk</option>
+            <option value="After_acc_creation/govt official.html">Government Official</option>
         </select>
         <br><br>
         <button onclick="submitRole()">Submit</button>
     </div>
 
     <script>
-        function submitRole() {
-            const selectedRole = document.getElementById("roleSelect").value;
-            alert(You have selected the role: ${selectedRole});
-            // You can perform additional actions based on the selected role here.
+        document.getElementById("roleSelect").addEventListener("change", function() {
+        var selectedOption = this.value;
+        if (selectedOption !== "") {
+            window.location.href = selectedOption;
         }
+    });
     </script>
 </body>
 </html>
