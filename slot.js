@@ -14,6 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
             bookingTime.textContent = selectedTime;
         } else {
             alert("Please select a date and time slot.");
-        }
-    });
+        }
+    });
 });

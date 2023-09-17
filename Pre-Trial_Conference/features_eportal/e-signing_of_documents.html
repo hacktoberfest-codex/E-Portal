@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Court Document Signing</title>
+</head>
+
+<body>
+    <h1>Court Document Signing</h1>
+    <input type="file" id="documentInput" accept=".pdf">
+    <button onclick="uploadDocument()">Upload Document</button>
+    <canvas id="signatureCanvas" width="400" height="200"></canvas>
+    <button onclick="clearSignature()">Clear Signature</button>
+    <button onclick="signDocument()">Sign Document</button>
+
+    <div id="signedDocumentContainer">
+        <h2>Signed Document</h2>
+        <a id="downloadLink" style="display: none;" download="signed_document.pdf">Download Signed Document</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
