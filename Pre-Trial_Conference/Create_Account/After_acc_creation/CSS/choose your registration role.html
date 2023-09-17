@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Role:</h1>
+        <select id="roleSelect">
+            <option value="user">User</option>
+            <option value="advocate">Advocate</option>
+            <option value="judge">Judge</option>
+            <option value="clerk">Clerk</option>
+            <option value="govt-official">Government Official</option>
+        </select>
+        <br><br>
+        <button onclick="submitRole()">Submit</button>
+    </div>
+
+    <script>
+        function submitRole() {
+            const selectedRole = document.getElementById("roleSelect").value;
+            alert(`You have selected the role: ${selectedRole}`);
+            // You can perform additional actions based on the selected role here.
+        }
+    </script>
+</body>
+</html>
