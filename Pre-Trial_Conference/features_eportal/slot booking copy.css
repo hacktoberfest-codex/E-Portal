@@ -1,29 +1,40 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    color: #333;
-}
-
-.calendar-day {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ccc;
-    margin: 2px;
-    line-height: 30px;
     text-align: center;
-    cursor: pointer;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.available {
-    background-color: green;
-    color: white;
+.calendar h2, .booking-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.unavailable {
-    background-color: red;
-    color: white;
+.calendar input[type="date"], .calendar select, .calendar button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.booking-details p {
+    font-size: 18px;
+    margin-bottom: 10px;
 }

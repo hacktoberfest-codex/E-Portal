@@ -4,22 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slot Booking System</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <!-- Add fonts here -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Slot Booking</title>
 </head>
 
 <body>
-    <header>
-        <h1>Slot Booking System</h1>
-    </header>
-    <main>
-        <!-- Your booking form and slot display here -->
-    </main>
-    <footer>
-        <p>&copy; 2023 Slot Booking System</p>
-    </footer>
+    <div class="container">
+        <h1>Slot Booking</h1>
+        <div class="calendar">
+            <h2>Select a Date and Time:</h2>
+            <input type="date" id="datePicker">
+            <select id="timeSlot">
+                <option value="09:00 AM">09:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="02:00 PM">02:00 PM</option>
+                <option value="04:00 PM">04:00 PM</option>
+            </select>
+            <button id="bookButton">Book Slot</button>
+        </div>
+        <div class="booking-details">
+            <h2>Your Booking Details:</h2>
+            <p>Date: <span id="bookingDate"></span></p>
+            <p>Time: <span id="bookingTime"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
