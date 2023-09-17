@@ -53,3 +53,18 @@ table{
     height: 20px;
 }
 
+
+.home-button {
+    position: relative;
+    top: 30px; /* Adjust the top offset to position the button vertically */
+    right: 30px; /* Adjust the right offset to position the button horizontally */
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+}
